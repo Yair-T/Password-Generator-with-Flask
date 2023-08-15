@@ -1,0 +1,28 @@
+<!-- The code by Yair-T | https://youtube.com/@Yair-T | https://github.com/Yair-T -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='asset/favicon.svg') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  <body>
+    <div class="txt">
+      <h3>Generate A <br/> <span>Secure Password</span></h3>
+    </div>
+    <form method="post">
+      {{ form.csrf_token }}
+      <div class="password-area">
+        {{ form.password }}
+        <i class="material-symbols-outlined">content_copy</i>
+      </div>
+      <div class="submit-btn">{{ form.btn }}</div>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
